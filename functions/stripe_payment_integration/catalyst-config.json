@@ -1,0 +1,14 @@
+{
+	"deployment": {
+		"name": "stripe_payment_integration",
+		"stack": "node16",
+		"type": "advancedio",
+		"env_variables": {
+			"STRIPE_KEY": "Your Stripe Key",
+			"CODELIB_SECRET_KEY":"CODELIB_FAKE_KEY"
+		}
+	},
+	"execution": {
+		"main": "index.js"
+	}
+}

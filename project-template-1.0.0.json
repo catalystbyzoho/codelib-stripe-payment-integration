@@ -1,0 +1,30 @@
+{
+  "name" : "project-template",
+  "version" : "1.0.0",
+  "parameters" : { },
+  "components" : {
+    "Functions" : [ {
+      "type" : "function",
+      "name" : "stripe_payment_integration",
+      "properties" : {
+        "stack" : "node16",
+        "code" : {
+          "path" : "functions/stripe_payment_integration.zip"
+        },
+        "configuration" : {
+          "environment" : {
+            "variables" : {
+              "STRIPE_KEY" : "Your Stripe API Key",
+              "CODELIB_SECRET_KEY":"CODELIB_FAKE_KEY"
+            },
+            "last_updated_time" : 1677492863639
+          },
+          "memory" : 256
+        },
+        "type" : "applogic",
+        "name" : "stripe_payment_integration"
+      },
+      "dependsOn" : [ ]
+    } ]
+  }
+}

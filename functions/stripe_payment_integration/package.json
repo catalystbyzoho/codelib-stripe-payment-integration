@@ -1,0 +1,24 @@
+{
+	"name": "stripe_payment_integration",
+	"version": "1.0.0",
+	"main": "index.js",
+	"author": "support@zohocatalyst.com",
+	"dependencies": {
+		"ajv": "^8.12.0",
+		"ajv-errors": "^3.0.0",
+		"ajv-formats": "^2.1.1",
+		"express": "^4.18.1",
+		"stripe": "^10.2.0",
+		"zcatalyst-sdk-node": "latest"
+	},
+	"scripts": {
+		"lint":"eslint --fix ."
+	},
+	"devDependencies": {
+		"eslint": "^8.36.0",
+		"eslint-config-standard": "^17.0.0",
+		"eslint-plugin-import": "^2.27.5",
+		"eslint-plugin-n": "^15.6.1",
+		"eslint-plugin-promise": "^6.1.1"
+	}
+}
