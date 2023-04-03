@@ -14,7 +14,7 @@
         "configuration" : {
           "environment" : {
             "variables" : {
-              "STRIPE_KEY" : "Your Stripe API Key",
+              "STRIPE_SECRET_KEY" : "Your Stripe Secret Key",
               "CODELIB_SECRET_KEY":"CODELIB_FAKE_KEY"
             },
             "last_updated_time" : 1677492863639

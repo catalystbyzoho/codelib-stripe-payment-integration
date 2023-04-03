@@ -4,7 +4,7 @@
 		"stack": "node16",
 		"type": "advancedio",
 		"env_variables": {
-			"STRIPE_KEY": "Your Stripe Key",
+			"STRIPE_SECRET_KEY": "Your Stripe SecretKey",
 			"CODELIB_SECRET_KEY":"CODELIB_FAKE_KEY"
 		}
 	},

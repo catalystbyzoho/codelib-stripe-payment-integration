@@ -4,7 +4,7 @@ class AppConstants {
   }
 
   static Env = {
-    StripeKey: 'STRIPE_KEY',
+    StripeSecretKey: 'STRIPE_SECRET_KEY',
     CodelibSecretKey: 'CODELIB_SECRET_KEY'
   }
 }

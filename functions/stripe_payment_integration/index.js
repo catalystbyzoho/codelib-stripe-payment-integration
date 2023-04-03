@@ -83,7 +83,7 @@ app.use((req, res, next) => {
       )
     ) {
       throw new AppError(
-        400,
+        401,
         "You don't have permission to perform this operation. Kindly contact your administrator for more details."
       )
     }
@@ -119,7 +119,7 @@ app.post('/session', async (req, res) => {
     const cancelUrl = req.body.cancel_url
     const successUrl = req.body.success_url
 
-    const stripeInstance = Stripe(process.env[AppConstants.Env.StripeKey])
+    const stripeInstance = Stripe(process.env[AppConstants.Env.StripeSecretKey])
 
     const data = await stripeInstance.checkout.sessions.create({
       payment_method_types: ['card'],
