@@ -8,7 +8,7 @@ This CodeLib helps you handle billing, checkout and payment functionalities in y
 
 Upon installing this CodeLib, pre-defined Catalyst components specific to the CodeLib will be configured in your project. For the Stripe Payment Integration CodeLib, this will include a pre-configured [Catalyst Serverless function](https://catalyst.zoho.com/help/functions.html) ([Advanced I/O](https://catalyst.zoho.com/help/advancedio-functions.html)) in Node.js.
 
-When the user performs the checkout operation in the client, you can configure to execute the Advanced I/O function's endpoint(**/session**) on occurrence of that action. When this happens, a checkout session is created with Stripe by passing the required information such as the price ID of each product, its quantity, the currency options, and the acceptable payment methods from Catalyst's end. You can refer to [this](https://support.stripe.com/questions/how-to-create-products-and-prices) page to create products and their prices. You will need to pass the generated priceID value as a param to this endpoint.
+When the user performs the checkout operation in the client, you can configure to execute the Advanced I/O function's endpoint(**/session**) on occurrence of that action. When this happens, a checkout session is created with Stripe by passing the required information such as the price ID of each product, its quantity, the currency options, and the acceptable payment methods from Catalyst's end. You can refer to [this](https://support.stripe.com/questions/how-to-create-products-and-prices) page to create products and their prices. Fetch the API ID for the specific price value and pass that value in the price_id param.
 
 We will also be configuring a key named **CODELIB\_SECRET\_KEY** in the functions component which you will pass in the request header every time you try to access the endpoint of the pre-configured function in the CodeLib. This key allows you to access the Catalyst resources of the CodeLib securely.
 
@@ -37,10 +37,4 @@ You can get more detailed information on the steps to install and configure the 
 
 The following Catalyst resource is used as a part of the Stripe Payment Integration CodeLib :
 
-**1.[Catalyst Functions](https://catalyst.zoho.com/help/functions.html) :** The **stripe\_payment\_integration** function
-
-**([Advanced I/O](https://catalyst.zoho.com/help/advancedio-functions.html))** handles the logic to be executed upon checkout from the Catalyst end.
-
-When the **/session** endpoint is invoked, a checkout session is initiated with Stripe.
-
-You must pass the quantity of the products, their [price id](https://support.stripe.com/questions/how-to-create-products-and-prices), payment success and failure re-direction URLs in the request payload while invoking the function's endpoint as a cURL request. The checkout information will be made available on Stripe's dashboard and then the user will be re-directed to the payment page in Stripe. Based on the success or failure status of the payment being made, the user will be re-directed to the configured application URL
+**1.[Catalyst Serverless Functions](https://catalyst.zoho.com/help/functions.html) :** The **stripe\_payment\_integration** function **([Advanced I/O](https://catalyst.zoho.com/help/advancedio-functions.html))** handles the logic to be executed upon checkout from the Catalyst end. When the **/session** endpoint is invoked, a checkout session is initiated with Stripe. You must pass the quantity of the products, their [price id](https://support.stripe.com/questions/how-to-create-products-and-prices), payment success and failure re-direction URLs in the request payload while invoking the function's endpoint as a cURL request. The checkout information will be made available on Stripe's dashboard and then the user will be re-directed to the payment page in Stripe. Based on the success or failure status of the payment being made, the user will be re-directed to the configured application URL.
