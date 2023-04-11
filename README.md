@@ -20,11 +20,11 @@ After the user chooses the payment method and completes with payment processing 
 
 We have pre-configured the following properties in the Stripe Payment Integration CodeLib:
 
-**1.** Card payments are supported.
+* Card payments are supported.
 
-**2.** Shipping to India and US is allowed, and if the shipping time is within a time frame of 5-7 business days, then the shipping charges are *NIL*.
+* Shipping to India and US is allowed, and if the shipping time is within a time frame of 5-7 business days, then the shipping charges are *NIL*.
 
-**3.** If the user opts for fast shipping and the estimated shipping time is a day prior to the nominal shipping time, then they will be charged a price of *15USD*.
+* If the user opts for fast shipping and the estimated shipping time is a day prior to the nominal shipping time, then they will be charged a price of *15USD*.
 
 **Note :**
 
